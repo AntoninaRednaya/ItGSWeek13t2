@@ -13,9 +13,13 @@ function funct() {
     case '*':
       result = num1 * num2;
       break;
-    case '/':
-      result = num1 / num2;
+    case '/': {
+      if (num2 == 0)
+        result = 'На ноль делить нельзя!'
+      else
+        result = num1 / num2;
       break;
+    }
   }
   document.getElementById("result").innerHTML = result;
 }
